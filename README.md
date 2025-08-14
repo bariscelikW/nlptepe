@@ -1,8 +1,6 @@
-# dotsocr-exam-grader
+# dotsocr-exam-grader (Offline Version)
 
 End-to-end demo repository to **grade hand-written exams quickly** using **dots.ocr** for OCR and an **LLM** for rubric-driven scoring.
-
-> ⚡ Built for fast submission: drop your scanned exam images/PDFs into `examples/sample_exam/`, provide a rubric (JSON), set your OpenAI key, and run one command.
 
 ---
 
@@ -27,14 +25,10 @@ pip install -r requirements.txt
 - Place exam scans into: `examples/sample_exam/` (PNG/JPG/PDF).
 - Prepare a rubric JSON (see `config/example_rubric.json`).
 
-### 3) Set your LLM key
+### 3) Run
 ```bash
-export OPENAI_API_KEY=YOUR_KEY_HERE   # Windows PowerShell: $env:OPENAI_API_KEY="YOUR_KEY_HERE"
-```
+python grade_exam.py --input examples/sample_exam --rubric config/example_rubric.json --outdir outputs
 
-### 4) Run
-```bash
-python grade_exam.py   --input examples/sample_exam   --rubric config/example_rubric.json   --outdir outputs
 ```
 
 Outputs:
@@ -57,4 +51,5 @@ You can tweak the regex in `src/split_questions.py`.
 - **Privacy:** keep data local; do not upload student data to public repos.
 
 ## License
-MIT
+#BilisimVadisi2025
+Apache License 2.0
