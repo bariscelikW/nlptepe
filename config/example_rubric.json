@@ -1,0 +1,21 @@
+[
+  {
+    "id": "Q1",
+    "title": "What is the capital of Türkiye?",
+    "max_points": 5,
+    "criteria": [
+      "States Ankara as the capital (5 points).",
+      "Minor spelling variations allowed (e.g., 'Ankara' vs 'ankara')."
+    ]
+  },
+  {
+    "id": "Q2",
+    "title": "Explain gradient descent briefly.",
+    "max_points": 10,
+    "criteria": [
+      "Mentions iterative optimization minimizing a loss using gradients.",
+      "Discusses learning rate / step size.",
+      "Reasonable coherence."
+    ]
+  }
+]
