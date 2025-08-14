@@ -16,7 +16,6 @@ def new_run_dir(base_outdir: str) -> str:
     return full
 
 def guess_lang(text: str) -> str:
-    # ultra-light heuristic used only to improve prompts
     if re.search(r"[çğıöşüÇĞİÖŞÜ]", text):
         return "tr"
     return "en"

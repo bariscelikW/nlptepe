@@ -1,6 +1,5 @@
-import os, re, glob, json, shutil
-from typing import List, Dict, Any
-from PIL import Image
+import os, glob
+from typing import List, Dict
 from pdf2image import convert_from_path
 from .dots_ocr_adapter import ocr_image
 from .split_questions import split_into_questions
@@ -14,7 +13,6 @@ def _iter_images(input_path: str) -> List[str]:
         for ext in SUPPORTED:
             paths.extend(glob.glob(os.path.join(input_path, f"*{ext}")))
     elif os.path.isfile(input_path) and input_path.lower().endswith(".pdf"):
-        # convert PDF pages to images in a temp folder
         tmp = os.path.join(input_path + "_pages")
         ensure_dir(tmp)
         pages = convert_from_path(input_path, dpi=200)
